@@ -9,5 +9,12 @@
         <input type="file" name="file">
         <input type="submit" value="Upload">
     </form>
+
+    {% if success_message %}
+        <p>{{ success_message }}</p>
+        {% if show_results_link %}
+            <a href="{{ url_for('analyze_book') }}">View Analysis Results</a>
+        {% endif %}
+    {% endif %}
 </body>
 </html>

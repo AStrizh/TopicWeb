@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    {% for topic, words in topics_words.items() %}
+        <h2>Topic {{ topic }}: {{ words }}</h2>
+        <h3>Documents:</h3>
+        <ul>
+            {% for document in documents_for_topics[topic] %}
+                <li>{{ document }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>
