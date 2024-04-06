@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Upload File</title>
-</head>
-<body>
-    <h2>Upload File</h2>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <input type="submit" value="Upload">
-    </form>
-
-    {% if success_message %}
-        <p>{{ success_message }}</p>
-        {% if show_results_link %}
-            <a href="{{ url_for('analyze_book') }}">View Analysis Results</a>
-        {% endif %}
-    {% endif %}
-</body>
-</html>
+<!-- upload.html -->
+<form action="/" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="Upload">
+</form>
